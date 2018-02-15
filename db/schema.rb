@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180214235325) do
+ActiveRecord::Schema.define(version: 20180214235934) do
 
   create_table "authors", force: :cascade do |t|
     t.string "last_name"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20180214235325) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "role_id"
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
 end
