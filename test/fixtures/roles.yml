@@ -1,7 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  level: MyString
+administrator:
+  level: Administrator
 
-two:
-  level: MyString
+patron:
+  level: Patron
+
+librarian:
+  level: Librarian
