@@ -3,6 +3,9 @@
 %p
   %b Title:
   = @book.title
+  %b Authors:
+  - @book.authors.each do |author|
+    = author.full_name
 
 = link_to 'Edit', edit_book_path(@book)
 \|
