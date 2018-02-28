@@ -1,11 +1,11 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @book.title
-  %b Authors:
-  - @book.authors.each do |author|
-    = author.full_name
+%article
+  %h2= @book.title
+  %h3= "Author".pluralize(@book.authors.length)
+  %ul
+    - @book.authors.each do |author|
+      %li= author.full_name
 
 = link_to 'Edit', edit_book_path(@book)
 \|
