@@ -2,6 +2,7 @@
 
 = render 'form'
 
-= link_to 'Show', @book
-\|
-= link_to 'Back', books_path
+%nav
+  %ul
+    %li= link_to 'Show', @book
+    %li= link_to 'Back', books_path

@@ -7,6 +7,7 @@
     - @book.authors.each do |author|
       %li= author.full_name
 
-= link_to 'Edit', edit_book_path(@book)
-\|
-= link_to 'Back', books_path
+%nav
+  %ul
+    %li= link_to 'Edit', edit_book_path(@book)
+    %li= link_to 'Back', books_path
