@@ -9,5 +9,15 @@
   .field
     = f.label :title
     = f.text_field :title
+
+  %ul
+  = f.fields_for :authors, @book.authors do |author|
+    %li
+      = author.label :first_name
+      = author.text_field :first_name
+    %li
+      = author.label :last_name
+      = author.text_field :last_name
+
   .actions
     = f.submit 'Save'
