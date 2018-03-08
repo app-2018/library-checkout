@@ -30,4 +30,18 @@ h2 {
   font-size: px_to_rem(49.5);
   line-height: px_to_rem(52); /* 2 baselines */
 }
+
+.editor {
+  li {
+    margin: 0 1em 1em 1em;
+    padding: .25rem;
+    text-align: center;
+    a {
+      text-decoration: none;
+      display: block;
+      background: blue;
+      color: white;
+      border-radius: .2rem;
+    }
+  }
 }
