@@ -15,10 +15,19 @@ $base_text_color: #B00;
 @function px_to_em($target,$context:$base_font_size) {
   @return ($target / $context) * 1em
 }
+@function px_to_rem($target) {
+  @return ($target / $base_font_size) * 1rem
+}
 
 html {
   font-family: Helvetica, Arial, sans-serif;
   color: $base_text_color;
   font-size: px_to_em($base_font_size, 16);
-  line-height: px_to_em($base_line_height);
+  line-height: px_to_rem($base_line_height);
+}
+
+h2 {
+  font-size: px_to_rem(49.5);
+  line-height: px_to_rem(52); /* 2 baselines */
+}
 }
